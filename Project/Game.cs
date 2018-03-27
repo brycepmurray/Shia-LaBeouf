@@ -19,13 +19,11 @@ namespace CastleGrimtol.Project
         {
             Console.Clear();
             CurrentPlayer = new Player();
-            if (CurrentPlayer.PlayerName == "D$" || CurrentPlayer.PlayerName == "DMONEY" || CurrentPlayer.PlayerName == "DARRYL")
-            {
-                Win();
                 // DARRYL();
-            }
         }
-        // public void DARRYL()
+        // public void DARRYL()    
+            // if (CurrentPlayer.PlayerName == "D$" || CurrentPlayer.PlayerName == "DMONEY" || CurrentPlayer.PlayerName == "DARRYL")
+            // {
         // {
         //     Console.WriteLine($@"
         //        You are Walking in the woods, 
@@ -34,7 +32,7 @@ namespace CastleGrimtol.Project
         //        (whisper)Shia LaBeouf...
         //        ");
         //     Console.WriteLine($@"
-        //        As if in response, the ground benieth you
+        //        As if in response, the ground beneath you
         //        echos your pressence back towards your pursuer...
         //        In a rumbling whisper that would shake even the 
         //        strongest of men or women to the core you hear.....
@@ -49,12 +47,18 @@ namespace CastleGrimtol.Project
         //        knowing that he stands no chance against 
         //        the Being of Absolute Power D$!
         //     ");
-        //     CurrentPlayer.Score++;
+        // while(CurrentPlayer.Score < 100000000)
+        // {
+        //     CurrentPlayer.Score ++;
+        //      Console.WriteLine(CurrentPlayer.Score)
+        // }
         //     DARRYL();
+            // }
         // }
         public void Win()
         {
             Console.Clear();
+
             
         }
 
