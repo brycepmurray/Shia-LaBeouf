@@ -19,7 +19,8 @@ namespace CastleGrimtol.Project
         {
         Console.WriteLine("What would you like to be known by?");
         string name = Console.ReadLine();
-        
+        PlayerName = name.ToUpper();
+
         }
     }
 }
