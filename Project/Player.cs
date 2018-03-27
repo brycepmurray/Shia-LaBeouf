@@ -21,6 +21,7 @@ namespace CastleGrimtol.Project
         string name = Console.ReadLine();
         PlayerName = name.ToUpper();
 
+        return PlayerName;
         }
     }
 }
