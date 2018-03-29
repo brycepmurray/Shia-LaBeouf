@@ -10,7 +10,7 @@ namespace CastleGrimtol
             System.Console.WriteLine("Hello World, Trevor sucks!");
             System.Console.WriteLine($@"
             
-                   ########       ##           ##      ################            ##
+                   ########       ##           ##     ################             ##
                   ##       ##     ##           ##            ##                   ####
                   ##              ##           ##            ##                  ##  ##
                     ##            ##           ##            ##                 ##    ##
