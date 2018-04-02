@@ -51,10 +51,31 @@ namespace CastleGrimtol.Project
             hidingPlace.Directions.Add("give up", deeperWoods);
             hidingPlace.Directions.Add("move towards Cottage", outsideCottage);
             outsideCottage.Directions.Add("Go back to your cover", hidingPlace);
-            outsideCottage.Directions.Add("look through window", insideCottage);
+            outsideCottage.Directions.Add("look through the window", insideCottage);
+            insideCottage.Directions.Add("try and leave the Cottage", outsideCottage);
+            insideCottage.Directions.Add("sneak towards Shia", darkWoods);
+            darkWoods.Directions.Add(" use Jiu-Jitsu", battleRoom);
+            battleRoom.Directions.Add("fight!", finalRoom);
 
+            battleRoom.Items.Add("axe", axe);
 
+            game.Rooms.Add(woods);
+            game.Rooms.Add(deeperWoods);
+            game.Rooms.Add(hidingPlace);
+            game.Rooms.Add(outsideCottage);
+            game.Rooms.Add(insideCottage);
+            game.Rooms.Add(darkWoods);
+            game.Rooms.Add(battleRoom);
+            game.Rooms.Add(finalRoom);
+                        
+            game.Playing();
+        }
 
+        public void Playing()
+        {
+            Console.Clear();
+            this.CurrentRoom = this.Rooms[0];
+            bool playing = true;
         }
         public void Win()
         {
