@@ -76,6 +76,8 @@ namespace CastleGrimtol.Project
             Console.Clear();
             this.CurrentRoom = this.Rooms[0];
             bool playing = true;
+
+            
         }
         public void Win()
         {
