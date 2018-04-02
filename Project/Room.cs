@@ -12,9 +12,10 @@ namespace CastleGrimtol.Project
         
       public Room(string name, string description,  List<Item> Items)
         {
-            this.Items = Items;
             this.Name = Name;
             this.Description = Description;
+            this.Exits = new Dictionary<string, Room>();
+            this.Items = Items;
         }
         public void AddDoor(string direction, Room room)
         {

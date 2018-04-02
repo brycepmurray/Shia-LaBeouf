@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CastleGrimtol.Project
 {
@@ -10,6 +11,11 @@ namespace CastleGrimtol.Project
         public List<Room> Rooms { get; set; }
         public Boolean Playing { get; set; }
 
+         public Game()
+        {
+            Rooms = new List<Room>();
+            Items = new Dictionary<string, Item>();
+        }
         public void Reset()
         {
             Playing = true; ;
