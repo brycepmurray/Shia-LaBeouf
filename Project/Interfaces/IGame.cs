@@ -5,7 +5,7 @@ namespace CastleGrimtol.Project
     interface IGame
     {
         Room CurrentRoom { get; set; }
-        Player CurrentPlayer { get; set; }
+        Player Player { get; set; }
 
         void Setup();
         void Reset();
