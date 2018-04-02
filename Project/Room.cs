@@ -8,7 +8,7 @@ namespace CastleGrimtol.Project
         public string Name {get; set; }
         public string Description {get; set;}
         public Dictionary <string, Item> Items {get; set;}
-        public Dictionary<string, Room> Directinos = new Dictionary<string, Room>();
+        public Dictionary<string, Room> Directions = new Dictionary<string, Room>();
         
       public Room(string name, string description)
         {
