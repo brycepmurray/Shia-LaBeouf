@@ -7,23 +7,18 @@ namespace CastleGrimtol.Project
     {
         public string Name {get; set; }
         public string Description {get; set;}
-        public List <Item> Items {get; set;}
-        public Dictionary<string, Room> Exits = new Dictionary<string, Room>();
+        public Dictionary <string, Item> Items {get; set;}
+        public Dictionary<string, Room> Directinos = new Dictionary<string, Room>();
         
-      public Room(string name, string description,  List<Item> Items)
+      public Room(string name, string description)
         {
             this.Name = Name;
             this.Description = Description;
-            this.Exits = new Dictionary<string, Room>();
-            this.Items = Items;
-        }
-        public void AddDoor(string direction, Room room)
-        {
-            Exits.Add(direction, room);
+            this.Directions = new Dictionary<string, Room>();
+            this.Items = new Dictionary<string, Item>();
         }
         public void UseItem(Item item)
         {
-            throw new NotImplementedException();
         }
     }
 }
