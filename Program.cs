@@ -5,25 +5,10 @@ namespace CastleGrimtol
 {
     public class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            System.Console.WriteLine("Hello World, Trevor sucks!");
-            System.Console.WriteLine($@"
-            
-                   ########       ##           ##     ################             ##
-                  ##       ##     ##           ##            ##                   ####
-                  ##              ##           ##            ##                  ##  ##
-                    ##            ##           ##            ##                 ##    ##
-                      ##          ###############            ##                ##      ##
-                        ##        ##           ##            ##               ############ 
-                          ##      ##           ##            ##              ##          ##
-                  ##       ##     ##           ##            ##             ##            ##
-                    ########      ##           ##     ################     ##              ##
-
-            ");
-
-           Game newGame = new Game();
-           newGame.Setup();
+           Game Game = new Game();
+           Game.Setup();
         }
     }
 }

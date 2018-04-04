@@ -36,7 +36,7 @@ namespace CastleGrimtol.Project
             // Directions = new Dictionary<string, Room>();
             // Items = new Dictionary<string, Item>();
 
-            Room woods = new Room("The Woods","You are in The Woods, its night and your phone is dead It looks like forward might be your only option");
+            Room woods = new Room("The Woods", "You are in The Woods, its night and your phone is dead It looks like forward might be your only option");
             Room deeperWoods = new Room("Deeper in The Woods", "There is a man chasing you on all fours deep in the woods! you can either try and fight him, or try and escape!");
             Room hidingPlace = new Room("HidingPlace", "You creep siliently through the underbrush. Aha in the distance, a small cottage with a light on. Hope. You can go to the cottage, or risk it in the woods with Shia Labeuf");
             Room outsideCottage = new Room("Outside The Cottage", "You are on the Doorstep of the cotage, you can burst in, and enter, leave the cottage to bleed out in your hiding place, or look into the window....");
@@ -67,17 +67,77 @@ namespace CastleGrimtol.Project
             game.Rooms.Add(darkWoods);
             game.Rooms.Add(battleRoom);
             game.Rooms.Add(finalRoom);
-                        
-            game.Playing();
+
+            game.playing();
         }
 
-        public void Playing()
+        public void playing()
         {
             Console.Clear();
             this.CurrentRoom = this.Rooms[0];
             bool playing = true;
-
+            System.Console.WriteLine($@"
             
+                               ########       ##           ##     ################             ##
+                              ##       ##     ##           ##            ##                   ####
+                              ##              ##           ##            ##                  ##  ##
+                                ##            ##           ##            ##                 ##    ##
+                                  ##          ###############            ##                ##      ##
+                                    ##        ##           ##            ##               ############ 
+                                      ##      ##           ##            ##              ##          ##
+                              ##       ##     ##           ##            ##             ##            ##
+                                ########      ##           ##     ################     ##              ##
+
+
+                 ##                       ##             #########         ##############     ##            ##     ###############    
+                 ##                      ####            ##       ##       ##                 ##            ##     ## 
+                 ##                     ##  ##           ##        ##      ##                 ##            ##     ## 
+                 ##                    ##    ##          ##        ##      ##                 ##            ##     ## 
+                 ##                   ##      ##         ##########        ##############     ##            ##     ############ 
+                 ##                  ############        ##        ##      ##                 ##            ##     ## 
+                 ##                 ##          ##       ##         ##     ##                 ##            ##     ## 
+                 ##                ##            ##      ##         ##     ##                   ##        ##       ## 
+                 ############     ##              ##     ###########       ##############         ########         ## 
+            ");
+
+            while (playing)
+            {
+                #region The Woods
+                if (this.CurrentRoom == this.Rooms[0])
+                {
+                    if (this.Player.Moves > 0)
+                    {
+                        Console.Clear();
+                        System.Console.WriteLine($@"
+                        ______________________________
+                            {this.CurrentRoom.Name}
+                        ______________________________    
+                        ");
+                        System.Console.WriteLine($@"
+                        You are Walking in the woods, 
+                        Theres no one around and your phone is dead, 
+                        out of the corner of your eye, you spot him....
+                        (whisper)Shia LaBeouf...   
+            ");
+                    }
+                    bool theWoods = true;
+                    while (theWoods)
+                    {
+                        System.Console.WriteLine(">");
+                        string choice = Console.ReadLine();
+                        this.Player.Moves++;
+
+                        if (choice.ToLower().StartsWith('f'))
+                        {
+
+                        }
+                    }
+                    #endregion
+                }
+            }
+
+
+
         }
         public void Win()
         {
